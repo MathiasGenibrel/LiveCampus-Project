@@ -1,6 +1,6 @@
 export const themeConfig = {
   colors: {
-    primary: "#4059AD",
+    primary: "#11172D",
     secondary: "#6B9AC4",
     tertiary: "#EFF2F1",
   },
@@ -12,6 +12,7 @@ export const themeConfig = {
     },
   },
   spacings: {
+    extraSmall: "0.25rem",
     small: "0.5rem",
     medium: "1rem",
     large: "2rem",

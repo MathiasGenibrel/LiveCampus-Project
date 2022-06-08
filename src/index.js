@@ -3,7 +3,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
+// Import Pages Components
 import App from "./App";
+import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
+
+// Import styles theme and reset styles
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { themeConfig } from "./styles/theme.config";
 // import reportWebVitals from './reportWebVitals';
@@ -21,8 +26,8 @@ root.render(
             <Route path="albums" element={<App />} /> {/* <Album /> */}
             <Route path="photos" element={<App />} /> {/* <PhotoList /> */}
           </Route>
-          <Route path="/login" element={<App />} />
-          <Route path="/register" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
