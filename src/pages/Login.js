@@ -3,7 +3,9 @@ import { BaseForm } from "../components/Base/BaseForm";
 
 // Import Custom Hooks
 import useInput from "../hooks/useInput";
-import { Link } from "react-router-dom";
+
+import * as Styled from "../styles/Login";
+import companyLogo from "../assets/images/logo.png";
 
 export const Login = () => {
   const [email, handleEmailChange] = useInput("");
@@ -11,7 +13,7 @@ export const Login = () => {
 
   const [form, setForm] = useState({
     title: "Connect to your account",
-    submit: "Connect",
+    submit: "Login",
     fieldsets: [
       {
         type: "email",
@@ -49,13 +51,19 @@ export const Login = () => {
   }, [email, password]);
 
   return (
-    <>
-      <figure>
-        <img src="" alt="Best solution to share your art" />
-        <figcaption>Instagroom</figcaption>
-      </figure>
+    <Styled.Main>
+      <Styled.Figure>
+        <img src={companyLogo} alt="Best solution to share your art" />
+        <figcaption>Best solution to share your art</figcaption>
+      </Styled.Figure>
       <BaseForm form={form} />
-      <Link to={"../register"}>No account ? Join community</Link>
-    </>
+      <Styled.Indication>
+        No account ?
+        <Styled.RouterLink to={"../register"}>
+          {" "}
+          Join community
+        </Styled.RouterLink>
+      </Styled.Indication>
+    </Styled.Main>
   );
 };

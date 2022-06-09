@@ -6,13 +6,13 @@ import * as Styled from "./BaseForm.styles";
 
 export const BaseForm = ({ form, onSubmit: handleSubmit }) => {
   return (
-    <>
-      <h1>{form.title}</h1>
+    <Styled.Section>
+      <Styled.Title>{form.title}</Styled.Title>
       <Styled.Form>
         {form.fieldsets.map((item, index) => {
           return (
             <label htmlFor={item.type} key={index}>
-              <p>{item.label} :</p>
+              <Styled.Text>{item.label} :</Styled.Text>
               <Styled.Input
                 value={item.value}
                 onChange={item.onChange}
@@ -24,6 +24,6 @@ export const BaseForm = ({ form, onSubmit: handleSubmit }) => {
         })}
         <BaseButton text={form.submit} onSubmit={handleSubmit} />
       </Styled.Form>
-    </>
+    </Styled.Section>
   );
 };

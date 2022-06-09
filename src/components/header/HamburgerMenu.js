@@ -16,8 +16,8 @@ const Span = styled.span`
   position: absolute;
   height: 3px;
   width: 100%;
-  background: ${(props) => props.theme.colors.tertiary};
-  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.tertiary};
+  border-radius: ${({ theme }) => theme.radius.small};
   opacity: 1;
   transition: 0.2s linear;
   &:nth-child(1) {
