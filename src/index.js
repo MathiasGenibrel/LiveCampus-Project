@@ -5,8 +5,7 @@ import { ThemeProvider } from "styled-components";
 
 // Import Pages Components
 import App from "./App";
-import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
+import { Auth } from "./pages/Auth";
 
 // Import styles theme and reset styles
 import { GlobalStyles } from "./styles/GlobalStyles";
@@ -26,8 +25,8 @@ root.render(
             <Route path="albums" element={<App />} /> {/* <Album /> */}
             <Route path="photos" element={<App />} /> {/* <PhotoList /> */}
           </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Auth form="login" />} />
+          <Route path="/register" element={<Auth form="register" />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -11,12 +11,12 @@ export const BaseForm = ({ form, onSubmit: handleSubmit }) => {
       <Styled.Form>
         {form.fieldsets.map((item, index) => {
           return (
-            <label htmlFor={item.type} key={index}>
+            <label htmlFor={item.id} key={index}>
               <Styled.Text>{item.label} :</Styled.Text>
               <Styled.Input
                 value={item.value}
                 onChange={item.onChange}
-                id={item.type}
+                id={item.id}
                 type={item.type}
               />
             </label>
